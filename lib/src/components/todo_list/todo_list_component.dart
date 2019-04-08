@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
 
-import 'todo_list_service.dart';
+import '../../services/todo_list_service.dart';
 
 @Component(
   selector: 'todo-list',

@@ -1,25 +1,20 @@
-ul {
-  list-style: none;
-  padding-left: 0;
+.head {
+    background-color: #f8f9fa;
+    padding: 5px;
+    text-align: center;
 }
 
-li {
-  line-height: 3em;
+table {
+    border-collapse: collapse;
+    width: 100%;
+    display: block;
+    overflow: auto;
 }
 
-li:hover {
-  background-color: #EEEEEE;
+td {
+    border: 1px solid #e2e2e3;
 }
 
-li material-checkbox {
-  vertical-align: middle;
-}
-
-li material-fab {
-  float: right;
-  vertical-align: middle;
-}
-
-.done {
-  text-decoration: line-through;
+td:first-child {
+    width: 20px;
 }
