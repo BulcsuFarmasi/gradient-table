@@ -1,18 +1,22 @@
+:host {
+    text-align: center;
+    display: block;
+}
+
 .head {
     background-color: #f8f9fa;
-    padding: 5px;
     text-align: center;
 }
 
 table {
     border-collapse: collapse;
-    width: 100%;
-    display: block;
     overflow: auto;
+    width: 100%;
 }
 
 td {
     border: 1px solid #e2e2e3;
+    padding: 10px;
 }
 
 td:first-child {

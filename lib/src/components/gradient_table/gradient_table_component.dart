@@ -20,26 +20,18 @@ import '../../services/gradient_table_service.dart';
     ClassProvider(GradientTableService)
   ],
 )
-class GradientTableComponent implements OnInit {
+class GradientTableComponent {
   
   final GradientTableService gradientTableService;
   List<String> headLetters;
   List<List<Color>> gradientCells;
-  int size;
+  int size = 0;
  
 
   GradientTableComponent(this.gradientTableService);
 
-  
-  
-  @override
-  void ngOnInit()  {
-    size = 10;
-    generateTable();   
-   }
-
    void onSizeChanged (int _size) {
-     size = _size;
+     size =_size;
      generateTable();
    }
 

@@ -1,4 +1,7 @@
-<material-input label="Table Size"
-                  autoFocus floatingLabel 
-                  [(ngModel)]="newTodo"></material-input>
-<material-button (click)="changeSize()">Generate Table</material-button>
+<p>
+    <label for="tableSize">Table Size</label><br>
+    <input type="number" min="2" max="100" step="1" (change)="validate()" [(ngModel)]="size">
+</p>
+<p *ngIf="!isInt">The size of the table must be an integer</p>
+<p *ngIf="!isInRange">The size of table should be between 2 and 100</p>
+<button (click)="changeSize()"  [disabled]="!isValid">Generate Table</button>
