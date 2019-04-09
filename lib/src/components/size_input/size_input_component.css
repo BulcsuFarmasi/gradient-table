@@ -1,5 +1,24 @@
+.danger {
+    color: #dc3545;
+}
+
+button {
+    width: 125px;
+    padding: 5px;
+    border-radius: 2px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;   
+}
+
+button:disabled{
+    background-color: #6c757d
+}
+
 input {
-    width: 150px;
-    padding: 10px;
-    border-radius: 2px;  
+    width: 125px;
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #6c757d;  
+    margin-top: 5px;
 }
