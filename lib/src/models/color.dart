@@ -1,12 +1,12 @@
 class Color {
-  int red;
-  int green;
-  int blue;
+  double red;
+  double green;
+  double blue;
 
   Color(this.red, this.green, this.blue);
 
   @override
   String toString() {
-     return 'rgb(${red}, ${green}, ${blue})'; 
+     return 'rgb(${red.round()}, ${green.round()}, ${blue.round()})'; 
   }
 }

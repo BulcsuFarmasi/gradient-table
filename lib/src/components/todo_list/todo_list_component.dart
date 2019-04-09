@@ -33,6 +33,7 @@ class TodoListComponent implements OnInit {
   }
 
   void add() {
+    print(newTodo);
     items.add(newTodo);
     newTodo = '';
   }

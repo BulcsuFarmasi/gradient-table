@@ -35,11 +35,24 @@ class GradientTableService  {
   }
 
   List<List<Color>> getGradientCells (int size) {
-     List<List<Color>> gradientCells = new List();
+     List<List<Color>> gradientCells = List();
+     Color startColor = Color(255,255,255);
+     Color endColor = Color(255,0,0);
      for (int i = 0; i < size; i++) {
-       gradientCells.add(new List());
+       gradientCells.add(List());
        for (int j = 0; j < size; j++) {
-         gradientCells[i].add(new Color(255,0,0));
+           Color cellColor;
+           if (i == 0 && j == 0) {
+             cellColor = startColor;
+           } else if (i == size -1 && j == size - 1)  {
+             cellColor = endColor;
+           } else {
+             double cellColorValue = (1 - (((i + j) / 2) / size)) * startColor.green;
+             if (i == 0 && j == 31) {
+             }
+             cellColor = Color(255, cellColorValue, cellColorValue); 
+           }     
+           gradientCells[i].add(cellColor);
        }
      }
      return gradientCells; 

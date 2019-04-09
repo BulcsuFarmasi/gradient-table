@@ -1,4 +1,6 @@
-<table>
+<size-input (sizeChanged)="onSizeChanged($event)"></size-input>
+<button (click)="changeSize()">Change Size</button>
+<table *ngIf="size > 0">
     <tr>
         <td class="head"></td>
         <td  class="head" *ngFor="let headLetter of headLetters">{{ headLetter }}</td>
