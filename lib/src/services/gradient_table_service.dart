@@ -48,8 +48,6 @@ class GradientTableService  {
              cellColor = endColor;
            } else {
              double cellColorValue = (1 - (((i + j) / 2) / size)) * startColor.green;
-             if (i == 0 && j == 31) {
-             }
              cellColor = Color(255, cellColorValue, cellColorValue); 
            }     
            gradientCells[i].add(cellColor);

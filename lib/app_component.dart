@@ -14,5 +14,5 @@ import 'src/components/gradient_table/gradient_table_component.dart';
   directives: [GradientTableComponent],
 )
 class AppComponent {
-  // Nothing here yet. All logic is in TodoListComponent.
+  
 }

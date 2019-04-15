@@ -39,14 +39,7 @@ class SizeInputComponent {
         }
       
         isValid = isInt && isInRange;
-  //    int sizeInt = int.tryParse(size);
-  //    isInt = (sizeInt == null);
-  //    isInRange = (sizeInt < 2 || sizeInt > 100 );
-
-  //    isValid = (!isInt && !isInRange);
-  //    print(isInt);      
-  //    print(isInRange);      
-  //    print(isValid);      
+  
   }
 
 }
