@@ -36,8 +36,9 @@ class GradientTableComponent {
    }
 
    void generateTable () {
-    headLetters = this.gradientTableService.getHeadLetters(size);
-    gradientCells = this.gradientTableService.getGradientCells(size);
+    this.gradientTableService.setSize(size); 
+    headLetters = this.gradientTableService.getHeadLetters();
+    gradientCells = this.gradientTableService.getGradientCells();
    }
 
 }

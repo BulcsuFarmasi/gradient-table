@@ -7,7 +7,13 @@ import '../models/color.dart';
 @Injectable()
 class GradientTableService  {
 
-    List<String> getHeadLetters (int size) {
+    int size;
+
+    void setSize (int _size) {
+      size = _size;
+    }
+
+    List<String> getHeadLetters () {
       List<String> headLetters = []; 
       for (int i = 0; i < size; i++) {
         headLetters.add(this.getLetterFromNumber(i));
@@ -34,27 +40,45 @@ class GradientTableService  {
     return letter;
   }
 
-  List<List<Color>> getGradientCells (int size) {
+  List<List<Color>> getGradientCells () {
      List<List<Color>> gradientCells = List();
-     Color startColor = Color(255,255,255);
-     Color endColor = Color(255,0,0);
+     
      for (int i = 0; i < size; i++) {
        gradientCells.add(List());
        for (int j = 0; j < size; j++) {
-           Color cellColor;
-           if (i == 0 && j == 0) {
-             cellColor = startColor;
-           } else if (i == size -1 && j == size - 1)  {
-             cellColor = endColor;
-           } else {
-             double cellColorValue = (1 - (((i + j) / 2) / size)) * startColor.green;
-             cellColor = Color(255, cellColorValue, cellColorValue); 
-           }     
-           gradientCells[i].add(cellColor);
+           Color color = _getColor(j, i);        
+           gradientCells[i].add(color);
        }
      }
      return gradientCells; 
   }
+
+  Color _getColor (int x, int y) {
+      Color startColor = Color(255,255,255);
+      Color endColor = Color(255,0,0);
+      Color color;
+           if (_isFirst(x, y)) {
+             color = startColor;
+           } else if (_isLast(x, y))  {
+             color = endColor;
+           } else {
+             double average = (x + y) / 2;
+             double percent = average / size;
+             double reversePercent = 1 - percent;
+             double colorValue = reversePercent * startColor.green;
+             color = Color(255, colorValue, colorValue); 
+           }
+      return color;          
+  }
+
+   bool _isFirst (int x, int y ) {
+     return x == 0 && y == 0;
+   }
+
+   bool _isLast (int x, int y) {
+     return x == size -1 && y == size -1;
+   }
+
 } 
 
 

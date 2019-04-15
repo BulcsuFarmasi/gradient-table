@@ -30,15 +30,26 @@ class SizeInputComponent {
   }
 
   void validate () {
-        isInt = (size != null);
+        isInt = _isInt();
         if (isInt) {
-          isInRange = (size >= 2 && size <= 100);  
+          isInRange = _isInRange(); 
         } else {
           isInRange = true;
         }
       
         isValid = isInt && isInRange;
   
+  }
+
+  bool _isInt () {
+    return (size != null);
+  }
+
+  bool _isInRange() {
+    final int min = 2;
+    final int max = 100;
+
+    return size >= min && size <= max;
   }
 
 }
