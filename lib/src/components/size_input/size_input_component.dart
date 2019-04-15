@@ -26,7 +26,6 @@ class SizeInputComponent {
   Stream<int> get sizeChanged => sizeChangedController.stream;
 
   void changeSize()  {
-    print(size);
     sizeChangedController.add(size);
   }
 

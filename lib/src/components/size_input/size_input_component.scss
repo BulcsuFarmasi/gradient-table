@@ -8,12 +8,12 @@ button {
     border-radius: 2px;
     border: none;
     background-color: #28a745;
-    color: #fff;   
+    color: #fff;
+    &:disabled {
+        background-color: #6c757d        
+    }   
 }
 
-button:disabled{
-    background-color: #6c757d
-}
 
 input {
     width: 125px;

@@ -19,8 +19,8 @@ table {
 
 td {
     border: 1px solid #e2e2e3;
+    &:first-child {
+        width: 20px;
+    }
 }
 
-td:first-child {
-    width: 20px;
-}
