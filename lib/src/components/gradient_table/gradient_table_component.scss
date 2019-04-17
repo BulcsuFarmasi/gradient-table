@@ -26,12 +26,10 @@ table {
 
 
 td {
-    $size: 20px;
     border: 1px solid #e2e2e3;
-    min-width: $size;
-    min-height: $size;
+    min-width: 20px;
     padding: 5px;
     &:first-child {
-        width: $size;
+        width: 20px;
     } 
  }
