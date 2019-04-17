@@ -25,15 +25,16 @@ class GradientTableService  {
     final int alphabetLength = 26; 
     double letterNumber = number / alphabetLength;
 
-    String letter = ''; 
+    String letter = '';    
+      
     
-    if (letterNumber > 1) {
+    if (letterNumber >= 1) {
         letter += String.fromCharCode(letterNumber.floor() - 1 + 65);
-    }
+    }     
 
     double fraction = letterNumber - letterNumber.floor();
 
-    int fractionLetterCode = (fraction * 26).round();
+    int fractionLetterCode = (fraction * 26).round();  
 
     letter += String.fromCharCode(65 + fractionLetterCode);
 
