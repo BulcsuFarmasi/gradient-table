@@ -1,11 +1,13 @@
 <size-input (sizeChanged)="onSizeChanged($event)"></size-input>
-<table *ngIf="size > 0">
-    <tr>
-        <td class="head"></td>
-        <td  class="head" *ngFor="let headLetter of headLetters">{{ headLetter }}</td>
-    </tr>
-    <tr *ngFor="let row of gradientCells;let i=index">
-        <td class="head">{{ i + 1 }}</td>
-        <td *ngFor="let cell of row" [style.background-color]="cell"></td>
-    </tr>
-</table>
+<div class="tableContainer">
+    <table *ngIf="size > 0">
+        <tr>
+            <td class="head"></td>
+            <td  class="head" *ngFor="let headLetter of headLetters">{{ headLetter }}</td>
+        </tr>
+        <tr *ngFor="let row of gradientCells;let i=index">
+            <td class="head">{{ i + 1 }}</td>
+            <td *ngFor="let cell of row" [style.background-color]="cell"></td>
+        </tr>
+    </table>
+</div>
